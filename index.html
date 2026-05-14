@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Globriddge — Connect</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:#070c18;
+  font-family:-apple-system,'SF Pro Display','Segoe UI',sans-serif;
+  animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.shell{
+  max-width:420px;
+  margin:auto;
+  min-height:100vh;
+}
+
+/* HERO */
+.hero{
+  height:220px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 20%, #123a6b55, transparent 60%),
+    radial-gradient(circle at 80% 80%, #0d6e4a33, transparent 60%),
+    #0b1628;
+}
+
+.hero::before,.hero::after{
+  content:'';
+  position:absolute;
+  border-radius:50%;
+  animation:float 8s ease-in-out infinite;
+}
+
+.hero::before{
+  width:320px;height:320px;
+  top:-150px;left:-80px;
+  background:#0e3d6e22;
+}
+
+.hero::after{
+  width:200px;height:200px;
+  bottom:-60px;right:-30px;
+  background:#0d6e4a18;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(12px);}
+}
+
+.logo-img{height:56px;margin-bottom:10px;z-index:2;}
+
+.hero-tag{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#4f7fb3;
+}
+
+.hero-line{
+  margin-top:12px;
+  color:#1a3a60;
+  font-size:10px;
+}
+
+/* WAVE */
+.wave{width:100%;display:block}
+
+/* CONTENT */
+.content{padding:0 18px 30px}
+
+/* ID CARD */
+.id-strip{
+  display:flex;
+  gap:12px;
+  padding:14px;
+  border-radius:16px;
+  margin-bottom:22px;
+
+  background:rgba(11,22,40,0.65);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.id-avatar{
+  width:46px;height:46px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid #1a3560;
+}
+
+.id-avatar img{width:100%;height:100%;object-fit:contain;padding:8px;}
+
+.id-name{
+  font-size:16px;
+  color:#fff;
+  font-weight:700;
+}
+
+.id-role{
+  font-size:11px;
+  color:#5c7a99;
+}
+
+/* LABEL */
+.slabel{
+  font-size:10px;
+  letter-spacing:.18em;
+  color:#1a3560;
+  margin-bottom:10px;
+}
+
+/* BUTTONS */
+.btn-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.full{grid-column:1/-1;}
+
+.cb{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px;
+  border-radius:14px;
+  text-decoration:none;
+
+  background:rgba(255,255,255,0.02);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+
+  transition:.2s;
+}
+
+.cb:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  border-color:rgba(80,140,255,.25);
+}
+
+.ci{
+  width:34px;height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  font-size:16px;
+}
+
+.ci-call{background:#0f2e18;color:#3ecf88;}
+.ci-wa{background:#0d3a16;color:#3ad46a;}
+.ci-mail{background:#0e2040;color:#5aaff5;}
+.ci-web{background:#1a0e38;color:#9070f0;}
+.ci-broc{background:#3e2008;color:#f0a030;}
+.ci-loc{background:#142540;color:#4a88c0;}
+
+.cl{color:#e6f0ff;font-weight:600;font-size:13px;}
+.cs{color:#5c7a99;font-size:10px;}
+
+/* DIVIDER */
+.div{
+  height:1px;
+  background:linear-gradient(to right,transparent,#1a3050,transparent);
+  margin:18px 0;
+  opacity:.4;
+}
+
+/* FOOTER */
+.foot{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+  color:#5c7a99;
+  font-size:11px;
+}
+
+.foot img{height:20px;opacity:.4;}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+
+<div class="hero">
+  <img class="logo-img" src="https://globriddge.com/wp-content/uploads/2025/11/Frame-2-1.png">
+  <div class="hero-tag">International Trade & Exports</div>
+  <div class="hero-line">Export Quality · Import Trust · Global Reach</div>
+</div>
+
+<svg class="wave" viewBox="0 0 420 28">
+<path d="M0 0 Q105 28 210 13 Q315 0 420 20 L420 0 Z" fill="#0b1628"/>
+<path d="M0 28 L420 28 L420 20 Q315 0 210 13 Q105 28 0 0 Z" fill="#070c18"/>
+</svg>
+
+<div class="content">
+
+<div class="id-strip">
+  <div class="id-avatar">
+    <img src="https://globriddge.com/wp-content/uploads/2025/11/Frame-2-1.png">
+  </div>
+  <div>
+    <div class="id-name">Globriddge International Pvt. Ltd.</div>
+    <div class="id-role">Export · Import · Logistics · Freight</div>
+  </div>
+</div>
+
+<div class="slabel">Get in touch</div>
+
+<div class="btn-grid">
+
+<a href="tel:+918485018668" class="cb">
+<div class="ci ci-call"><i class="ti ti-phone"></i></div>
+<div><div class="cl">Call Us</div><div class="cs">+91 84850 18668</div></div>
+</a>
+
+<a href="https://wa.me/918485018668" class="cb">
+<div class="ci ci-wa"><i class="ti ti-brand-whatsapp"></i></div>
+<div><div class="cl">WhatsApp</div><div class="cs">Chat instantly</div></div>
+</a>
+
+<a href="mailto:info@globriddge.com" class="cb">
+<div class="ci ci-mail"><i class="ti ti-mail"></i></div>
+<div><div class="cl">Email</div><div class="cs">info@globriddge.com</div></div>
+</a>
+
+<a href="https://globriddge.com" class="cb">
+<div class="ci ci-web"><i class="ti ti-world-www"></i></div>
+<div><div class="cl">Website</div><div class="cs">globriddge.com</div></div>
+</a>
+
+<a href="https://globriddge.com/wp-content/uploads/2026/01/Globriddge-Company-Profile-4.pdf" class="cb full" target="_blank">
+<div class="ci ci-broc"><i class="ti ti-file-download"></i></div>
+<div><div class="cl">Download Brochure</div><div class="cs">Company profile PDF</div></div>
+</a>
+
+<a href="https://maps.google.com/?q=The Platinum Towers Kharadi Pune 411014" class="cb full" target="_blank">
+<div class="ci ci-loc"><i class="ti ti-map-pin"></i></div>
+<div>
+<div class="cl">Our Office</div>
+<div class="cs">The Platinum Towers, Kharadi, Pune 411014</div>
+</div>
+</a>
+
+</div>
+
+<div class="div"></div>
+
+<div class="foot">
+<div>Pune, India</div>
+<img src="https://globriddge.com/wp-content/uploads/2025/11/Frame-2-1.png">
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
